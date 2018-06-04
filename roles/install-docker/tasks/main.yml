@@ -1,0 +1,25 @@
+---
+- name: Add the docker signing key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg 
+    state: present
+
+- name: Add the docker APT repo
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic edge
+    state: present
+    filename: docker-io
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    force: yes
+    update_cache: yes
+  with_items: "{{ packages }}"
+
+- name: Add vagrant user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
