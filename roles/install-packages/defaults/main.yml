@@ -1,0 +1,55 @@
+---
+packages:
+  - vim-gtk
+  - git
+  - git-svn
+  - gitg
+  - subversion
+  - exuberant-ctags
+  - mc
+  - stow
+  - cmus
+  - meld
+  - encfs
+  - figlet
+  - keepassx
+  - xclip # command line interface to the X11 clipboard
+  - apg # automatic password generator
+  - rxvt-unicode # terminal emulator
+  - tmux # terminal multiplexer
+  - aptitude
+  - rsync
+  - openssh-server
+  - openssh-client
+  - libssl-dev
+  - libreadline-dev
+  - zlib1g-dev
+  - build-essential
+  - dkms #in case of installing virtualbox guest additions
+  - linux-generic #in case of installing virtualbox guest additions
+  - netcat
+  - qnapi
+  - octave
+  - tree
+  - python-pygments
+  - mcabber #Small Jabber console client
+  - thunar #file manager
+  - gnome-icon-theme-full # icons for thunar
+  - evince #document viewer
+  - ranger #awesome file manager well integrated with vim
+  - parallel # build and execute shell command lines from standard input in parallel
+  - apache2-utils # contains for example apache bench ab utility
+  - pavucontrol # pulse audio setup gui
+  - jq # command line json parser
+  - python3-csvkit # command line tools to work with csv files
+  - mplayer
+  - smplayer
+  - dia
+  - htop
+  - curl
+  - wget
+  - zsh
+  - zsh-doc
+  - alsa-utils
+  - imagemagick
+  - vagrant

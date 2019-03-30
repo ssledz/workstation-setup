@@ -12,11 +12,9 @@
 
 - name: Install packages
   apt:
-    name: "{{ item }}"
+    pkg: "{{ packages }}"
     state: present
-    force: yes
     update_cache: yes
-  with_items: "{{ packages }}"
 
 - name: Add vagrant user to docker group
   user:

@@ -13,3 +13,4 @@
   roles:
     - check-connection
     - install-docker
+    - install-packages
