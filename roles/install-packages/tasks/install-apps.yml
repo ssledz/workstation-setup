@@ -1,0 +1,6 @@
+---
+- name: Install apps
+  apt:
+    pkg: "{{ apps-packages }}"
+    state: present
+    update_cache: yes

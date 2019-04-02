@@ -1,0 +1,17 @@
+---
+- name: Make sure we have pip's 2+ installed
+  apt: pkg=python-pip update_cache=yes cache_valid_time=604800 state=latest
+
+- name: Make sure we have pip's 3+ installed
+  apt: pkg=python3-pip update_cache=yes cache_valid_time=604800 state=latest
+
+- name: Install virtualenv
+  apt: pkg=python-virtualenv state=latest
+
+- name: Install extra pip packages for Python 2+
+  pip: name={{ item }} executable=pip
+  with_items: "{{ pip_extra_packages | default ({}) }}"
+
+- name: Install extra pip packages for Python 3+
+  pip: name={{ item }} executable=/usr/local/bin/pip3
+  with_items: "{{ pip3_extra_packages | default ({}) }}"

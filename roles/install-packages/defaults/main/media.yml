@@ -1,0 +1,11 @@
+---
+media-packages:
+  - cmus                      # small and fast console audio player
+  - qnapi                     # subtitles manager
+  - evince                    # document viewer for PDF, PostScript, DjVu, TIFF, XPS and DVI formats
+  - mplayer                   # media player
+  - smplayer                  # gui for media player
+  - alsa-utils
+  - pavucontrol               # pulse audio setup gui
+  - imagemagick               # displaying, converting, and editing raster image and vector image files
+  - calibre                   # suite of e-book software
