@@ -2,6 +2,8 @@
 
 ```
 vagrant up
+sudo apt-get install virtualenv
+./init.env
 . ./env.sh
 ansible-playbook -i hosts site.yml
 ```

@@ -3,8 +3,9 @@
 - name: Update cache
   apt: update_cache=yes
 
+- include: install-dotfiles.yml
+- include: install-zsh.yml
 #- include: install-apps.yml
 #- include: install-media.yml
 #- include: install-i3.yml
 #- include: install-spotify.yml
-- include: install-zsh.yml

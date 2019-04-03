@@ -3,12 +3,4 @@
   apt: name=zsh state=present
 
 - name: Set zsh as default shell
-  shell: chsh -s `which zsh`
-
-- name: Download oh-my-zsh installer
-  get_url:
-    url: "https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh"
-    dest: /tmp/oh-my-zsh.sh
-
-- name: Run oh-my-zsh installer
-  shell: bash /tmp/oh-my-zsh.sh
+  shell: chsh -s `which zsh` '{{ ansible_user }}'
