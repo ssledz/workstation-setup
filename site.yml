@@ -11,6 +11,6 @@
     - name: Gathering Facts
       setup:
   roles:
-    - check-connection
-    - install-docker
+#    - check-connection
+#    - install-docker
     - install-packages

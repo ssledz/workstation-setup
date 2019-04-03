@@ -1,6 +1,5 @@
 ---
 - name: Install media
   apt:
-    pkg: "{{ media-packages }}"
+    pkg: "{{ media_packages }}"
     state: present
-    update_cache: yes

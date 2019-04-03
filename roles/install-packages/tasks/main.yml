@@ -1,6 +1,10 @@
 ---
-- include: install-apps.yml
-- include: install-i3.yml
-- include: install-media.yml
-- include: install-spotify.yml
+
+- name: Update cache
+  apt: update_cache=yes
+
+#- include: install-apps.yml
+#- include: install-media.yml
+#- include: install-i3.yml
+#- include: install-spotify.yml
 - include: install-zsh.yml

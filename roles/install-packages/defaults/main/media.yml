@@ -1,5 +1,5 @@
 ---
-media-packages:
+media_packages:
   - cmus                      # small and fast console audio player
   - qnapi                     # subtitles manager
   - evince                    # document viewer for PDF, PostScript, DjVu, TIFF, XPS and DVI formats
