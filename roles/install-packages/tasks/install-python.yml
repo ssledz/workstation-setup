@@ -9,9 +9,7 @@
   apt: pkg=python-virtualenv state=latest
 
 - name: Install extra pip packages for Python 2+
-  pip: name={{ item }} executable=pip
-  with_items: "{{ pip_extra_packages | default ({}) }}"
+  pip: name='{{ pip_packages | default ({}) }}' executable=pip
 
 - name: Install extra pip packages for Python 3+
-  pip: name={{ item }} executable=/usr/local/bin/pip3
-  with_items: "{{ pip3_extra_packages | default ({}) }}"
+  pip: name='{{ pip3_packages | default ({}) }}' executable=pip3

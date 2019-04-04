@@ -1,0 +1,4 @@
+pip3_packages:
+  - ipython==7.4.0
+pip_packages:
+  - ipython==5.3.0

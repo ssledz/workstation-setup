@@ -16,7 +16,7 @@
   become_user: '{{ansible_user}}'
   git:
     repo: 'https://github.com/ssledz/dotfiles'
-    dest: '/home/{{ansible_user}}/git/dotfiles'
+    dest: '/home/{{ ansible_user }}/git/dotfiles'
     track_submodules: no
     force: no
 
@@ -32,7 +32,7 @@
 
 - name: run stow
   become: true
-  become_user: '{{ansible_user}}'
+  become_user: '{{ ansible_user }}'
   shell: ./restow.sh
   args:
-    chdir: '/home/{{ansible_user}}/git/dotfiles'
+    chdir: '/home/{{ ansible_user }}/git/dotfiles'

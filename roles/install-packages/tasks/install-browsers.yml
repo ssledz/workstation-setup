@@ -1,0 +1,20 @@
+---
+- name: Set ppa google-chrome
+  apt_repository: repo='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
+
+- name: Add an apt signing key
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: Install google chrome
+  apt: name=google-chrome-stable state=present allow_unauthenticated=yes
+
+- name: Install mozilla firefox
+  apt: name=firefox state=present
+
+- name: install vlc
+  apt: name=vlc state=present
+
+- name: Install browser-plugin-vlc
+  apt: name=browser-plugin-vlc state=present
