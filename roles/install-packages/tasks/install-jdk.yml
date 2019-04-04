@@ -1,0 +1,22 @@
+---
+- name: Set ppa webupd8team/java
+  apt_repository: repo='ppa:webupd8team/java'
+
+- name: Install utils required for oracle jdk 8 installation
+  apt: name='{{ item }}' state=present
+  loop:
+    - software-properties-common
+    - python-software-properties
+    - debconf-utils
+
+- name: Accept oracle policy
+  shell: echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
+  args:
+    executable: /bin/bash
+
+- name: Install oracle jdk 8
+  apt: name=oracle-java8-installer state=present
+  loop:
+    - oracle-java8-installer
+    - oracle-java8-unlimited-jce-policy
+    - oracle-java8-set-default

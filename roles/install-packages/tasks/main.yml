@@ -6,7 +6,11 @@
 #- include: install-dotfiles.yml
 #- include: install-zsh.yml
 #- include: install-browsers.yml
-- include: install-python.yml
+#- include: install-python.yml
+#- include: install-dropbox.yml
+- include: install-jdk.yml
+- include: install-env-managers.yml
+#- include: install-mc.yml
 #- include: install-apps.yml
 #- include: install-media.yml
 #- include: install-i3.yml

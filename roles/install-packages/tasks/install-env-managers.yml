@@ -1,0 +1,41 @@
+---
+- name: Install git
+  apt: name=git state=present
+
+- name: clone jenv
+  become: true
+  become_user: '{{ansible_user}}'
+  git:
+    repo: 'https://github.com/gcuisinier/jenv.git'
+    dest: '/home/{{ ansible_user }}/.jenv'
+
+- name: setup jenv
+  become: true
+  become_user: '{{ ansible_user }}'
+  shell: |
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+    jenv enable-plugin ant
+    jenv enable-plugin maven
+    jenv enable-plugin gradle
+    jenv enable-plugin sbt
+    jenv enable-plugin groovy
+    jenv enable-plugin scala
+    jenv add /usr/lib/jvm/java-8-oracle
+    jenv global 1.8
+  args:
+    executable: /bin/bash
+
+- name: clone rbenv
+  become: true
+  become_user: '{{ansible_user}}'
+  git:
+    repo: 'https://github.com/sstephenson/rbenv.git'
+    dest: '/home/{{ ansible_user }}/.rbenv'
+
+- name: clone rbenv build plugin
+  become: true
+  become_user: '{{ansible_user}}'
+  git:
+    repo: 'https://github.com/sstephenson/ruby-build.git'
+    dest: '/home/{{ ansible_user }}/.rbenv/plugins/ruby-build'

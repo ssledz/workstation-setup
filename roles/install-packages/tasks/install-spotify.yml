@@ -5,7 +5,6 @@
     state: present
     id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 
-
 - name: Set ppa spotify
   apt_repository: repo='deb http://repository.spotify.com stable non-free'
 
