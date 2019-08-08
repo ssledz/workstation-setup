@@ -15,7 +15,7 @@
     executable: /bin/bash
 
 - name: Install oracle jdk 8
-  apt: name=oracle-java8-installer state=present
+  apt: name='{{ item }}' state=present
   loop:
     - oracle-java8-installer
     - oracle-java8-unlimited-jce-policy

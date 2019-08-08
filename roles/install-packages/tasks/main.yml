@@ -13,5 +13,6 @@
 - include: install-env-managers.yml
 - include: install-python.yml
 - include: install-browsers.yml
+- include: install-prolog.yml
 #- include: install-haskell.yml
 #- include: install-scala.yml
