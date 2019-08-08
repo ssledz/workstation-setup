@@ -1,0 +1,11 @@
+---
+- name: Set ppa ppa:swi-prolog/stable
+  apt_repository: repo='ppa:swi-prolog/stable'
+
+- name: Install utils required for swi prolog installation
+  apt: name='{{ item }}' state=present
+  loop:
+    - software-properties-common
+
+- name: Install swi prolog
+  apt: name=swi-prolog state=present

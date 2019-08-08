@@ -1,0 +1,5 @@
+---
+- name: Install apps
+  apt:
+    pkg: "{{ apps_packages }}"
+    state: present

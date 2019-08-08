@@ -1,0 +1,5 @@
+---
+- name: Install media
+  apt:
+    pkg: "{{ media_packages }}"
+    state: present

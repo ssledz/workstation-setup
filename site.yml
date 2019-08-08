@@ -10,7 +10,7 @@
       changed_when: output.stdout != ""
     - name: Gathering Facts
       setup:
+  tags: install-packages
   roles:
-    - check-connection
-    - install-docker
-    - install-packages
+    - role: install-packages
+      tags: install-packages

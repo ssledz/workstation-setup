@@ -1,0 +1,38 @@
+---
+- name: Install git
+  apt: name=git state=present
+
+- name: Install stow
+  apt: name=stow state=present
+
+- name: Install vim
+  apt: name=vim-gtk state=present
+
+- name: Install language pack
+  apt: name=language-pack-pl state=present
+
+- name: clone dotfiles repo
+  become: true
+  become_user: '{{ansible_user}}'
+  git:
+    repo: 'https://github.com/ssledz/dotfiles'
+    dest: '/home/{{ ansible_user }}/git/dotfiles'
+    track_submodules: no
+    force: no
+
+- name: setup before stow
+  become: true
+  become_user: '{{ ansible_user }}'
+  file:
+    path: '/home/{{ ansible_user }}/{{ item }}'
+    state: absent
+  with_items:
+    - .bash_logout
+    - .bashrc
+
+- name: run stow
+  become: true
+  become_user: '{{ ansible_user }}'
+  shell: ./restow.sh
+  args:
+    chdir: '/home/{{ ansible_user }}/git/dotfiles'

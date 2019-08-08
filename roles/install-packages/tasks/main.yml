@@ -1,6 +1,18 @@
 ---
-- name: Install packages
-  apt:
-    pkg: "{{ packages }}"
-    state: present
-    update_cache: yes
+
+- name: Update cache
+  apt: update_cache=yes cache_valid_time=120
+
+- include: install-apps.yml
+- include: install-media.yml
+- include: install-i3.yml
+- include: install-spotify.yml
+- include: install-jdk.yml
+- include: install-mc.yml
+- include: install-dropbox.yml
+- include: install-env-managers.yml
+- include: install-python.yml
+- include: install-browsers.yml
+- include: install-prolog.yml
+#- include: install-haskell.yml
+#- include: install-scala.yml
