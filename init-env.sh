@@ -1,6 +1,8 @@
 #!/bin/bash
-rm -rf .env
-virtualenv .env
-. .env/bin/activate
-pip install ansible
+
+if [[ ! -e .env ]]; then
+    virtualenv .env
+    . .env/bin/activate
+    pip install ansible
+fi
 

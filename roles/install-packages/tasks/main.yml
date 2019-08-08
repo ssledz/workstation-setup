@@ -10,8 +10,8 @@
 - include: install-jdk.yml
 - include: install-mc.yml
 - include: install-dropbox.yml
-#- include: install-browsers.yml
-#- include: install-python.yml
+- include: install-env-managers.yml
+- include: install-python.yml
+- include: install-browsers.yml
 #- include: install-haskell.yml
 #- include: install-scala.yml
-#- include: install-env-managers.yml
