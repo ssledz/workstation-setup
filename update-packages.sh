@@ -10,4 +10,4 @@ cd $dir
 
 . ./env.sh
 
-ansible-playbook -i hosts --limit localhost -c local --ask-become-pass site.yml
+ansible-playbook -i hosts --limit localhost -c local --ask-become-pass --tags "install-packages" site.yml
