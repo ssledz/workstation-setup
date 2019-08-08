@@ -1,6 +1,0 @@
----
-- name: Install zsh
-  apt: name=zsh state=present
-
-- name: Set zsh as default shell
-  shell: chsh -s `which zsh` '{{ ansible_user }}'
