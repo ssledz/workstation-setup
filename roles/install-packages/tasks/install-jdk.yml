@@ -6,7 +6,6 @@
   apt: name='{{ item }}' state=present
   loop:
     - software-properties-common
-    - python-software-properties
     - debconf-utils
 
 - name: Accept oracle policy
