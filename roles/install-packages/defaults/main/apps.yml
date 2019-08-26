@@ -44,3 +44,4 @@ apps_packages:
   - zsh
   - zsh-doc
   - vagrant
+  - policykit-1-gnome
