@@ -7,3 +7,11 @@
 
 - name: Install i3
   apt: name=i3 state=present allow_unauthenticated=yes
+
+- name: Install i3 extra
+  apt: name='{{ item }}' state=present
+  loop:
+    - i3blocks
+    - i3lock
+    - i3lock-fancy
+    - i3status
