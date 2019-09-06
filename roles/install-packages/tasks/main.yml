@@ -14,5 +14,6 @@
 - include: install-python.yml
 - include: install-browsers.yml
 - include: install-prolog.yml
+- include: install-erlang.yml
 #- include: install-haskell.yml
 #- include: install-scala.yml

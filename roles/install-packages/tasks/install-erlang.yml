@@ -1,0 +1,11 @@
+---
+- name: Add an apt signing key
+  apt_key:
+    url: https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
+    state: present
+
+- name: Set ppa erlang solutions
+  apt_repository: repo='deb [arch=amd64] https://packages.erlang-solutions.com/ubuntu {{ ansible_lsb['codename'] }} contrib'
+
+- name: Install erlang
+  apt: name=erlang state=present allow_unauthenticated=yes

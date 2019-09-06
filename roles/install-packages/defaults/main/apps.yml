@@ -32,7 +32,6 @@ apps_packages:
   - python-pygments
   - mcabber #Small Jabber console client
   - thunar #file manager
-  - gnome-icon-theme-full # icons for thunar
   - ranger #awesome file manager well integrated with vim
   - parallel # build and execute shell command lines from standard input in parallel
   - apache2-utils # contains for example apache bench ab utility
@@ -45,3 +44,4 @@ apps_packages:
   - zsh
   - zsh-doc
   - vagrant
+  - policykit-1-gnome

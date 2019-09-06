@@ -8,9 +8,14 @@
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
       register: output
       changed_when: output.stdout != ""
+      tags: install-packages, install-docker, install-dotfiles
     - name: Gathering Facts
       setup:
-  tags: install-packages
+      tags: install-packages, install-docker, install-dotfiles
   roles:
     - role: install-packages
       tags: install-packages
+    - role: install-docker
+      tags: install-docker
+    - role: install-dotfiles
+      tags: install-dotfiles
