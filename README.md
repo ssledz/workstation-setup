@@ -1,6 +1,11 @@
-# workstation-setup
+# Provisioning
 
-## Update vagrant machine
+Just execute this command and that's it! 
+```bash
+wget -qO- https://raw.githubusercontent.com/ssledz/workstation-setup/master/provision.sh | bash
+```
+
+# Testing using vagrant machine
 ```
 vagrant up
 sudo apt-get install virtualenv
@@ -9,14 +14,7 @@ sudo apt-get install virtualenv
 ansible-playbook -i hosts --limit 192.168.33.10 site.yml
 ```
 
-## Update local machine
-```
-./init-env.sh
-. ./env.sh
-ansible-playbook -i hosts --limit localhost -c local site.yml --ask-become-pass
-```
-
-## Useful commnads
+# Useful commands
 
 ```
 ansible localhost -i hosts -m setup -a 'filter=ansible_lsb'
