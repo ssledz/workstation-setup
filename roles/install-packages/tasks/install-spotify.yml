@@ -1,9 +1,8 @@
 ---
-- name: Connect to spotify keyserver
+- name: Add an apt signing key for spotify
   apt_key:
-    keyserver: hkp://keyserver.ubuntu.com:80
+    url: https://download.spotify.com/debian/pubkey.gpg
     state: present
-    id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 
 - name: Set ppa spotify
   apt_repository: repo='deb http://repository.spotify.com stable non-free'
