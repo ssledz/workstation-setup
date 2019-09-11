@@ -63,4 +63,5 @@ for req in ${required[@]}; do
   [[ -z ${!req} ]] && echo && echo "  Please specify $req" && show_help &&  exit 1
 done
 
-ansible-playbook -i hosts --limit localhost -c local --ask-become-pass --tags "$tags" site.yml
+ansible-playbook -i "localhost," --extra-vars "ansible_user=$USER" -c local --ask-become-pass --tags "$tags" site.yml
+
