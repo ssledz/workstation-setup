@@ -1,9 +1,9 @@
 ---
-- name: Add i3 repo
-  apt_repository: repo='deb http://debian.sur5r.net/i3/ {{ ansible_lsb['codename'] }} universe'
+#- name: Add i3 repo
+#  apt_repository: repo='deb https://debian.sur5r.net/i3/ {{ ansible_lsb['codename'] }} universe'
 
-- name: Install i3 keyring
-  apt: name=sur5r-keyring state=present allow_unauthenticated=yes
+#- name: Install i3 keyring
+#  apt: name=sur5r-keyring state=present allow_unauthenticated=yes
 
 - name: Install i3
   apt: name=i3 state=present allow_unauthenticated=yes
