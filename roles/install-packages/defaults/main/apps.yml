@@ -45,3 +45,4 @@ apps_packages:
   - zsh-doc
   - vagrant
   - policykit-1-gnome
+  - cmake

@@ -1,0 +1,29 @@
+---
+- name: clone PathPicker
+  become: true
+  git:
+    repo: 'https://github.com/facebook/PathPicker.git'
+    dest: '/usr/local/PathPicker'
+- name: install PathPicker
+  become: true
+  shell: |
+    cd /usr/local/PathPicker
+    ln -fs "$(pwd)/fpp" /usr/local/bin/fpp
+  args:
+    executable: /bin/bash
+
+- name: Download gron
+  become: true
+  get_url:
+    url: https://github.com/tomnomnom/gron/releases/download/v0.6.0/gron-linux-amd64-0.6.0.tgz
+    dest: /usr/local/gron-linux-amd64.tgz
+- name: install gron
+  become: true
+  shell: |
+    cd /usr/local/
+    tar xzf gron-linux-amd64.tgz
+    rm -rf gron-linux-amd64.tgz
+    mv -f gron /usr/local/bin/
+  args:
+    executable: /bin/bash
+
