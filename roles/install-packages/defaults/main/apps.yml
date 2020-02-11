@@ -46,4 +46,5 @@ apps_packages:
   - vagrant
   - policykit-1-gnome
   - cmake
-  - tig
+  - tig # text-mode interface for git
+  - tldr # lets you quickly access practical examples
