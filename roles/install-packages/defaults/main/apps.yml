@@ -46,3 +46,4 @@ apps_packages:
   - vagrant
   - policykit-1-gnome
   - cmake
+  - tig
