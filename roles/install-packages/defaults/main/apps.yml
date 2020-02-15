@@ -50,3 +50,4 @@ apps_packages:
   - tldr # lets you quickly access practical examples
   - lua5.3 # lua programming language
   - lua-check # a tool for linting and static analysis of Lua code
+  - luarocks # Lua package management system
