@@ -48,3 +48,4 @@ apps_packages:
   - cmake
   - tig # text-mode interface for git
   - tldr # lets you quickly access practical examples
+  - lua5.3 # lua programming language
