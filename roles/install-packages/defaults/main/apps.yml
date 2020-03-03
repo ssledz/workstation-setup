@@ -52,3 +52,4 @@ apps_packages:
   - lua-check # a tool for linting and static analysis of Lua code
   - luarocks # Lua package management system
   - urlview
+  - graphviz # open source graph visualization software
