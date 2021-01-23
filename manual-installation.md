@@ -139,6 +139,7 @@ schemas
     "name": "solarized-dark",
     "background": "#002B36",
     "brightBlack": "#073642",
+    //"brightBlack": "#0f6780",
     "brightBlue": "#268BD2",
     "black": "#002B36",
     "blue": "#839496",
