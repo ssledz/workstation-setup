@@ -119,3 +119,44 @@ sdk install ant 1.10.8
 sdk install gradle 6.8.1
 sdk install groovy 3.0.7
 ```
+
+## setup solarized dark for windows terminal
+profile
+```
+{
+  // Make changes here to the powershell.exe profile.
+  "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "name": "Windows PowerShell",
+  "commandline": "powershell.exe",
+  "hidden": false,
+  "colorScheme" : "solarized-dark"
+}
+```
+schemas
+```
+"schemes": [
+  {
+    "name": "solarized-dark",
+    "background": "#002B36",
+    "brightBlack": "#073642",
+    "brightBlue": "#268BD2",
+    "black": "#002B36",
+    "blue": "#839496",
+    "cyan": "#93A1A1",
+    "green": "#586E75",
+    "purple": "#6C71C4",
+    "red": "#CB4B16",
+    "white": "#FDF6E3",
+    "yellow": "#657B83",
+    "brightCyan": "#2AA198",
+    "foreground": "#839496",
+    "brightGreen": "#859900",
+    "brightPurple": "#D33682",
+    "brightRed": "#DC322F",
+    "brightWhite": "#EEE8D5",
+    "brightYellow": "#B58900"
+  }
+]
+```
+* [Solarized schemes shipped in Terminal Preview are incorrect #1509](https://github.com/microsoft/terminal/issues/1509)
+* [Custom Terminal guide](https://docs.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/custom-schemes)
