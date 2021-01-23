@@ -5,13 +5,14 @@ Windows Linux Subsystem
 
 #### must have apps
 ```
-sudo apt-get install \ 
+sudo apt-get install \
+  zip \
   git \
   exuberant-ctags \
   mc \
   stow \
   apg \
-  rxvt-unicode \ 
+  rxvt-unicode \
   tmux \
   aptitude \
   rsync \
@@ -101,4 +102,20 @@ jenv rehash
 sudo apt-get install mc
 mkdir -p ~/.mc/lib
 git clone https://github.com/iwfmp/mc-solarized-skin.git ~/.mc/lib/mc-solarized-skin
+```
+
+## update locate db
+```
+sudo updatedb --localpaths='/bin /home /etc /usr /opt /var'
+```
+
+## install sdkman & tools
+```
+curl -s "https://get.sdkman.io" | bash
+sdk install scala 2.13.4
+sdk install maven 3.6.3
+sdk install sbt 1.4.6
+sdk install ant 1.10.8
+sdk install gradle 6.8.1
+sdk install groovy 3.0.7
 ```
