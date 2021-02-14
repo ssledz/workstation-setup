@@ -104,6 +104,17 @@ mkdir -p ~/.mc/lib
 git clone https://github.com/iwfmp/mc-solarized-skin.git ~/.mc/lib/mc-solarized-skin
 ```
 
+## configure locale
+```
+apt-get install locales
+dpkg-reconfigure locales
+```
+or
+```
+sudo locale-gen pl_PL
+sudo locale-gen pl_PL.UTF-8
+```
+
 ## update locate db
 ```
 sudo updatedb --localpaths='/bin /home /etc /usr /opt /var'
